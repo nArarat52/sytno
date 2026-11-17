@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.Sytno" parent="Theme.Sytno.Base">
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+    </style>
+</resources>

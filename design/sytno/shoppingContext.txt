@@ -1,0 +1,397 @@
+const assetPathPrefix = "https://www.figma.com/api/mcp/asset/4ff238d4-0591-4e6a-94a5-058aa5406924";
+const imgIconCircleCheck = `${assetPathPrefix}/8339f.svg`;
+const imgIconSettings2 = `${assetPathPrefix}/42623.svg`;
+const imgIconBatteryFull = `${assetPathPrefix}/878fe.svg`;
+const imgIconWifi = `${assetPathPrefix}/8996f.svg`;
+const imgIconSignal = `${assetPathPrefix}/747b5.svg`;
+const imgIconHouse = `${assetPathPrefix}/f9978.svg`;
+const imgIconCalendarDays = `${assetPathPrefix}/b80d2.svg`;
+const imgIconShoppingBasket = `${assetPathPrefix}/bce21.svg`;
+const imgIconRefrigerator = `${assetPathPrefix}/d6417.svg`;
+
+function AndroidGestureArea({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--sytno-surface,white)] content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] h-[24px] items-center justify-center p-[var(--sytno-space-0,0px)] relative w-[412px]"} data-node-id="5:735" data-name="Android gesture area">
+      <div className="bg-[var(--sytno-text,#202c25)] h-[4px] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[108px]" data-node-id="5:736" data-name="Rectangle" />
+    </div>
+  );
+}
+
+type ButtonProps = {
+  className?: string;
+  kind?: "Primary";
+  label?: string;
+  state?: "Default";
+};
+
+function Button({ className, kind = "Primary", label = "Продолжить", state = "Default" }: ButtonProps) {
+  return (
+    <div className={className || "bg-[var(--sytno-brand,#245d42)] content-stretch flex gap-[var(--sytno-space-8,8px)] h-[56px] items-center justify-center p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] w-[364px]"} data-node-id="5:166">
+      <p className="[word-break:break-word] font-['Manrope:Bold'] font-bold leading-[22px] relative shrink-0 text-[15px] text-[color:var(--sytno-onBrand,white)] whitespace-nowrap" data-node-id="5:167">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type NoticeProps = {
+  className?: string;
+  body?: string;
+  title?: string;
+  type?: "Success";
+};
+
+function Notice({ className, body = "Учтём их при составлении покупок.", title = "Продукты уже дома", type = "Success" }: NoticeProps) {
+  return (
+    <div className={className || "bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] w-[364px]"} data-node-id="5:219">
+      <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[24px]" data-node-id="5:220" data-name="Icon/circle-check">
+        <div className="relative shrink-0 size-[24px]" data-node-id="I5:220;5:126" data-name="Icon / circle-check">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCircleCheck} />
+        </div>
+      </div>
+      <div className="[word-break:break-word] content-stretch flex flex-col font-['Manrope:Medium'] font-medium gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-[color:var(--sytno-brand,#245d42)] w-[288px]" data-node-id="5:224" data-name="Copy">
+        <p className="leading-[20px] relative shrink-0 text-[14px] w-[288px]" data-node-id="5:225">
+          {title}
+        </p>
+        <p className="leading-[18px] relative shrink-0 text-[12px] w-[288px]" data-node-id="5:226">
+          {body}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function IconSettings2({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:9" data-name="Icon/settings-2">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:10" data-name="Icon / settings-2">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconSettings2} />
+      </div>
+    </div>
+  );
+}
+
+function IconBatteryFull({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:69" data-name="Icon/battery-full">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:70" data-name="Icon / battery-full">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconBatteryFull} />
+      </div>
+    </div>
+  );
+}
+
+function IconWifi({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:160" data-name="Icon/wifi">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:161" data-name="Icon / wifi">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconWifi} />
+      </div>
+    </div>
+  );
+}
+
+function IconSignal({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:2" data-name="Icon/signal">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:3" data-name="Icon / signal">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconSignal} />
+      </div>
+    </div>
+  );
+}
+
+function AndroidStatusBar({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex gap-[var(--sytno-space-0,0px)] h-[48px] items-center justify-between p-[var(--sytno-space-24,24px)] relative w-[412px]"} data-node-id="5:712" data-name="Android status bar">
+      <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-text,#202c25)] whitespace-nowrap" data-node-id="5:713">
+        9:41
+      </p>
+      <div className="content-stretch flex gap-[var(--sytno-space-6,6px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[64px]" data-node-id="5:714" data-name="System icons">
+        <IconSignal className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[16px]" />
+        <IconWifi className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[16px]" />
+        <IconBatteryFull className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[20px]" />
+      </div>
+    </div>
+  );
+}
+
+export default function ScreenShoppingBought() {
+  return (
+    <div className="bg-[var(--sytno-bg,#f7f7f0)] content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start overflow-clip p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-28,28px)] size-full" data-node-id="7:22" data-name="Screen / shoppingBought">
+      <AndroidStatusBar className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[48px] items-center justify-between p-[var(--sytno-space-24,24px)] relative shrink-0 w-[412px]" />
+      <div className="content-stretch flex flex-col gap-[var(--sytno-space-8,8px)] items-start pb-[var(--sytno-space-16,16px)] pt-[var(--sytno-space-12,12px)] px-[var(--sytno-space-24,24px)] relative shrink-0 w-[412px]" data-node-id="10:1442" data-name="Header">
+        <div className="content-stretch flex gap-[var(--sytno-space-8,8px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[364px]" data-node-id="10:1443" data-name="Heading">
+          <p className="[word-break:break-word] font-['Manrope:Bold'] font-bold leading-[38px] relative shrink-0 text-[30px] text-[color:var(--sytno-text,#202c25)] w-[308px]" data-node-id="10:1444">
+            Покупки
+          </p>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-0,0px)] items-center justify-center p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 size-[48px]" data-node-id="10:1445" data-name="Action / settings / Icon button">
+            <IconSettings2 className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[24px]" />
+          </a>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] text-[color:var(--sytno-secondary,#627066)] w-[364px]" data-node-id="10:1455">
+          2 из 16 позиций куплено
+        </p>
+      </div>
+      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--sytno-space-0,0px)] items-start min-h-px overflow-x-clip overflow-y-auto p-[var(--sytno-space-0,0px)] relative w-[412px]" data-node-id="10:1456" data-name="Scrollable content">
+        <div className="content-stretch flex flex-col gap-[var(--sytno-space-16,16px)] items-start pb-[var(--sytno-space-24,24px)] pt-[var(--sytno-space-0,0px)] px-[var(--sytno-space-24,24px)] relative shrink-0 w-[412px]" data-node-id="10:1457" data-name="Content">
+          <div className="[word-break:break-word] bg-[var(--sytno-brandDeep,#183e2d)] content-stretch flex flex-col gap-[var(--sytno-space-8,8px)] items-start p-[var(--sytno-space-20,20px)] relative rounded-[var(--sytno-radius-24,24px)] shrink-0 text-[color:var(--sytno-onBrand,white)] w-[364px]" data-node-id="10:1458" data-name="Purchase progress">
+            <p className="font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] w-[324px]" data-node-id="10:1459">
+              Осталось купить на
+            </p>
+            <p className="font-['Manrope:ExtraBold'] font-extrabold leading-[44px] relative shrink-0 text-[36px] w-[324px]" data-node-id="10:1460">
+              3 182 ₽
+            </p>
+            <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] w-[324px]" data-node-id="10:1461">
+              Куплено на 238 ₽ · бюджет недели 4 000 ₽
+            </p>
+          </div>
+          <Notice body="Рис +500 г и яйца +10 шт." className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" title="Добавлено в домашние запасы" />
+          <div className="content-stretch flex gap-[var(--sytno-space-8,8px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[364px]" data-node-id="10:1508" data-name="Section heading">
+            <p className="[word-break:break-word] font-['Manrope:Bold'] font-bold leading-[28px] relative shrink-0 text-[20px] text-[color:var(--sytno-text,#202c25)] w-[364px]" data-node-id="10:1509">
+              Куплено · 238 ₽
+            </p>
+          </div>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-8,8px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" data-node-id="10:1510" data-name="Action / purchaseEdit / Shopping row / State=Bought">
+            <CodeConnectSnippet data-node-id="I10:1510;5:473" data-name="Action / shopping / Checkboxes / Type=Selected, State=Enabled">
+              {/* Material 3 Design Kit component
+Docs:
+  https://m3.material.io/components/checkbox/overview  */}
+              <Checkboxes booleanShowFocusIndicator={false} showFocusIndicator={false} variantType="Selected" type="Selected" variantState="Enabled" state="Enabled">
+                <CheckSmall />
+              </Checkboxes>
+            </CodeConnectSnippet>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-[color:var(--sytno-secondary,#627066)] text-left w-[200px]" data-node-id="I10:1510;5:479" data-name="Copy">
+              <p className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid font-['Manrope:SemiBold'] font-semibold leading-[24px] line-through relative shrink-0 text-[16px] w-[200px]" data-node-id="I10:1510;5:480">
+                Рис длиннозёрный
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] w-[200px]" data-node-id="I10:1510;5:481">
+                500 г · дома теперь 900 г
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 w-[88px]" data-node-id="I10:1510;5:482" data-name="Price">
+              <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] text-left w-[88px]" data-node-id="I10:1510;5:483">
+                89 ₽
+              </p>
+            </div>
+          </a>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-8,8px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" data-node-id="10:1526" data-name="Action / purchaseEdit / Shopping row / State=Bought">
+            <CodeConnectSnippet data-node-id="I10:1526;5:473" data-name="Action / shopping / Checkboxes / Type=Selected, State=Enabled">
+              {/* Material 3 Design Kit component
+Docs:
+  https://m3.material.io/components/checkbox/overview  */}
+              <Checkboxes booleanShowFocusIndicator={false} showFocusIndicator={false} variantType="Selected" type="Selected" variantState="Enabled" state="Enabled">
+                <CheckSmall />
+              </Checkboxes>
+            </CodeConnectSnippet>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-[color:var(--sytno-secondary,#627066)] text-left w-[200px]" data-node-id="I10:1526;5:479" data-name="Copy">
+              <p className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid font-['Manrope:SemiBold'] font-semibold leading-[24px] line-through relative shrink-0 text-[16px] w-[200px]" data-node-id="I10:1526;5:480">
+                Яйца С1
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] w-[200px]" data-node-id="I10:1526;5:481">
+                10 шт. · дома теперь 16 шт.
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 w-[88px]" data-node-id="I10:1526;5:482" data-name="Price">
+              <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] text-left w-[88px]" data-node-id="I10:1526;5:483">
+                149 ₽
+              </p>
+            </div>
+          </a>
+          <div className="content-stretch flex gap-[var(--sytno-space-8,8px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[364px]" data-node-id="10:1470" data-name="Section heading">
+            <p className="[word-break:break-word] font-['Manrope:Bold'] font-bold leading-[28px] relative shrink-0 text-[20px] text-[color:var(--sytno-text,#202c25)] w-[364px]" data-node-id="10:1471">
+              Ещё купить
+            </p>
+          </div>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-8,8px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" data-node-id="10:1472" data-name="Action / purchaseEdit / Shopping row / State=Needed">
+            <CodeConnectSnippet data-node-id="I10:1472;5:464" data-name="Action / shoppingBought / Checkboxes / Type=Unselected, State=Enabled">
+              {/* Material 3 Design Kit component
+Docs:
+  https://m3.material.io/components/checkbox/overview  */}
+              <Checkboxes booleanShowFocusIndicator={false} showFocusIndicator={false} variantType="Unselected" type="Unselected" variantState="Enabled" state="Enabled" />
+            </CodeConnectSnippet>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-left w-[200px]" data-node-id="I10:1472;5:467" data-name="Copy">
+              <p className="font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] w-[200px]" data-node-id="I10:1472;5:468">
+                Куриное филе
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] w-[200px]" data-node-id="I10:1472;5:469">
+                2 упаковки × 500 г
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 w-[88px]" data-node-id="I10:1472;5:470" data-name="Price">
+              <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] text-left w-[88px]" data-node-id="I10:1472;5:471">
+                998 ₽
+              </p>
+            </div>
+          </a>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-8,8px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" data-node-id="10:1481" data-name="Action / purchaseEdit / Shopping row / State=Needed">
+            <CodeConnectSnippet data-node-id="I10:1481;5:464" data-name="Action / shoppingBought / Checkboxes / Type=Unselected, State=Enabled">
+              {/* Material 3 Design Kit component
+Docs:
+  https://m3.material.io/components/checkbox/overview  */}
+              <Checkboxes booleanShowFocusIndicator={false} showFocusIndicator={false} variantType="Unselected" type="Unselected" variantState="Enabled" state="Enabled" />
+            </CodeConnectSnippet>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-left w-[200px]" data-node-id="I10:1481;5:467" data-name="Copy">
+              <p className="font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] w-[200px]" data-node-id="I10:1481;5:468">
+                Гречка
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] w-[200px]" data-node-id="I10:1481;5:469">
+                1 упаковка · 800 г
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 w-[88px]" data-node-id="I10:1481;5:470" data-name="Price">
+              <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] text-left w-[88px]" data-node-id="I10:1481;5:471">
+                99 ₽
+              </p>
+            </div>
+          </a>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-8,8px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" data-node-id="10:1490" data-name="Action / purchaseEdit / Shopping row / State=Needed">
+            <CodeConnectSnippet data-node-id="I10:1490;5:464" data-name="Action / shoppingBought / Checkboxes / Type=Unselected, State=Enabled">
+              {/* Material 3 Design Kit component
+Docs:
+  https://m3.material.io/components/checkbox/overview  */}
+              <Checkboxes booleanShowFocusIndicator={false} showFocusIndicator={false} variantType="Unselected" type="Unselected" variantState="Enabled" state="Enabled" />
+            </CodeConnectSnippet>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-left w-[200px]" data-node-id="I10:1490;5:467" data-name="Copy">
+              <p className="font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] w-[200px]" data-node-id="I10:1490;5:468">
+                Творог 5%
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] w-[200px]" data-node-id="I10:1490;5:469">
+                2 упаковки × 400 г
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 w-[88px]" data-node-id="I10:1490;5:470" data-name="Price">
+              <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] text-left w-[88px]" data-node-id="I10:1490;5:471">
+                319 ₽
+              </p>
+            </div>
+          </a>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-8,8px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" data-node-id="10:1499" data-name="Action / shopping / Shopping row / State=Needed">
+            <CodeConnectSnippet data-node-id="I10:1499;5:464" data-name="Action / shoppingBought / Checkboxes / Type=Unselected, State=Enabled">
+              {/* Material 3 Design Kit component
+Docs:
+  https://m3.material.io/components/checkbox/overview  */}
+              <Checkboxes booleanShowFocusIndicator={false} showFocusIndicator={false} variantType="Unselected" type="Unselected" variantState="Enabled" state="Enabled" />
+            </CodeConnectSnippet>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-left w-[200px]" data-node-id="I10:1499;5:467" data-name="Copy">
+              <p className="font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] w-[200px]" data-node-id="I10:1499;5:468">
+                Остальные 11 позиций
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] w-[200px]" data-node-id="I10:1499;5:469">
+                Нажми, чтобы открыть весь список
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 w-[88px]" data-node-id="I10:1499;5:470" data-name="Price">
+              <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] text-left w-[88px]" data-node-id="I10:1499;5:471">
+                1 766 ₽
+              </p>
+            </div>
+          </a>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] w-[364px]" data-node-id="10:1537">
+            Повторное нажатие отменит покупку и её зачисление в запасы.
+          </p>
+        </div>
+      </div>
+      <div className="bg-[var(--sytno-bg,#f7f7f0)] content-stretch flex flex-col gap-[var(--sytno-space-8,8px)] items-start px-[var(--sytno-space-24,24px)] py-[var(--sytno-space-12,12px)] relative shrink-0 w-[412px]" data-node-id="10:1538" data-name="Sticky action">
+        <Button className="bg-[var(--sytno-brand,#245d42)] content-stretch cursor-pointer flex gap-[var(--sytno-space-8,8px)] h-[56px] items-center justify-center p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" label="Посмотреть домашние запасы" />
+      </div>
+      <div className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-0,0px)] h-[80px] items-center p-[var(--sytno-space-12,12px)] relative shrink-0 w-[412px]" data-node-id="10:1541" data-name="Bottom navigation / Active=Shopping">
+        <a className="content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I10:1541;5:626" data-name="Action / today / Tab / Today">
+          <div className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I10:1541;5:627" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I10:1541;5:628" data-name="Icon/house">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I10:1541;5:628;5:119" data-name="Icon / house">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconHouse} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] text-left whitespace-nowrap" data-node-id="I10:1541;5:632">
+            Сегодня
+          </p>
+        </a>
+        <a className="content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I10:1541;5:633" data-name="Action / week / Tab / Week">
+          <div className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I10:1541;5:634" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I10:1541;5:635" data-name="Icon/calendar-days">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I10:1541;5:635;5:47" data-name="Icon / calendar-days">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCalendarDays} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] text-left whitespace-nowrap" data-node-id="I10:1541;5:647">
+            Неделя
+          </p>
+        </a>
+        <a className="content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I10:1541;5:648" data-name="Action / shopping / Tab / Shopping">
+          <div className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I10:1541;5:649" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I10:1541;5:650" data-name="Icon/shopping-basket">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I10:1541;5:650;5:22" data-name="Icon / shopping-basket">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconShoppingBasket} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-brand,#245d42)] text-left whitespace-nowrap" data-node-id="I10:1541;5:659">
+            Покупки
+          </p>
+        </a>
+        <a className="content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I10:1541;5:660" data-name="Action / pantry / Tab / Pantry">
+          <div className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I10:1541;5:661" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I10:1541;5:662" data-name="Icon/refrigerator">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I10:1541;5:662;5:114" data-name="Icon / refrigerator">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconRefrigerator} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] text-left whitespace-nowrap" data-node-id="I10:1541;5:667">
+            Запасы
+          </p>
+        </a>
+      </div>
+      <AndroidGestureArea className="bg-[var(--sytno-surface,white)] content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] h-[24px] items-center justify-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[412px]" />
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: Сытно/Caption: Font(family: "Manrope", style: Medium, size: 12, weight: 500, lineHeight: 18, letterSpacing: 0), Сытно/Title: Font(family: "Manrope", style: Bold, size: 30, weight: 700, lineHeight: 38, letterSpacing: 0), Сытно/Small: Font(family: "Manrope", style: Medium, size: 14, weight: 500, lineHeight: 20, letterSpacing: 0), Сытно/Amount: Font(family: "Manrope", style: ExtraBold, size: 36, weight: 800, lineHeight: 44, letterSpacing: 0), Сытно/Subheading: Font(family: "Manrope", style: Bold, size: 20, weight: 700, lineHeight: 28, letterSpacing: 0), Сытно/Bought: Font(family: "Manrope", style: SemiBold, size: 16, weight: 600, lineHeight: 24, letterSpacing: 0), Сытно/BodyStrong: Font(family: "Manrope", style: SemiBold, size: 16, weight: 600, lineHeight: 24, letterSpacing: 0), M3/sys/light/on-surface-variant: #49454F, Сытно/Label: Font(family: "Manrope", style: Bold, size: 15, weight: 700, lineHeight: 22, letterSpacing: 0).
+
+If the node is connected to a code component in the users codebase via Code Connect, the connected component will be included in the final markup wrapped in a CodeConnectSnippet element, with relevant imports at the top of the file. There are two formats: 1. Single snippet: <CodeConnectSnippet data-snippet-language="React"><TitleComponent>Hello World</TitleComponent></CodeConnectSnippet> 2. Multiple options: <CodeConnectSnippet data-snippet-language="React" options={[<Button variant="primary" />, <Button variant="secondary" />]} /> IMPORTANT: the CodeConnectSnippet wrapper element should not be part of the final code. For the options format, choose the single most appropriate option to use in your implementation. The source of the code component will be in the import path, e.g. import {ComponentName } from 'path/to/component'; IMPORTANT: the import path may not be relative/may point to a URL, so you should search for the component in the codebase and MUST use it if possible.
+
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## Notice
+**Node ID:** 5:245
+
+Сытно · Notice. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+## Shopping row
+**Node ID:** 5:493
+
+Сытно · Shopping row. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+## Checkboxes
+**Node ID:** 5:340
+
+Checkboxes are a selection control which allow users to select one or more options from a set; present a list containing sub-selections; and turn an item on or off in a desktop environment
+
+**Documentation:**
+- [https://m3.material.io/components/checkbox/overview ](https://m3.material.io/components/checkbox/overview )
+
+## Button
+**Node ID:** 5:190
+
+Сытно · Button. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+## Bottom navigation
+**Node ID:** 5:711
+
+Сытно · Bottom navigation. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+The generated code contains image and SVG URL constants, e.g. const image = `${assetPathPrefix}/<asset file name>`, where assetPathPrefix is declared once at the top of the code and every asset URL interpolates it. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

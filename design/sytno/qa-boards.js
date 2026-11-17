@@ -1,0 +1,3 @@
+const p=await figma.getNodeByIdAsync('4:2');await figma.setCurrentPageAsync(p);const reviewed=[];const removed=[];
+for(const group of GROUPS){const width=group.keys.length*412+(group.keys.length-1)*32+48;const board=a(p,'QA / '+group.name,'VERTICAL',width,24,16,'bg',24);board.x=30000;board.y=100;t(board,group.name,'Heading','brand',width-48);const rr=row(board,'Screens',width-48,32);rr.counterAxisAlignItems='MIN';for(const key of group.keys){const src=await figma.getNodeByIdAsync(SCREENIDS[key]);const c=reg(src.clone());rr.appendChild(c);c.name='QA / '+key;}const ids=allIds(board);await board.screenshot({scale:0.75});reviewed.push({name:group.name,keys:group.keys});removed.push(...ids);board.remove();}
+return {createdNodeIds:removed,removedNodeIds:removed,reviewed};

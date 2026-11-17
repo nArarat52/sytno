@@ -1,0 +1,3 @@
+-keepattributes Signature
+-keep class ru.sytno.core.** { *; }
+-keep class com.google.gson.reflect.TypeToken { *; }

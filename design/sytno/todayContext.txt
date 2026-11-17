@@ -1,0 +1,388 @@
+const assetPathPrefix = "https://www.figma.com/api/mcp/asset/bbba0297-538e-4375-a437-12e01f15957e";
+const imgIconCircleCheck = `${assetPathPrefix}/8339f.svg`;
+const imgFoodPhoto0 = `${assetPathPrefix}/00d5c.png`;
+const imgIconSettings2 = `${assetPathPrefix}/42623.svg`;
+const imgIconBatteryFull = `${assetPathPrefix}/878fe.svg`;
+const imgIconWifi = `${assetPathPrefix}/8996f.svg`;
+const imgIconSignal = `${assetPathPrefix}/747b5.svg`;
+const imgVisualActionShoppingIconArrowRight = `${assetPathPrefix}/36392.svg`;
+const imgIconBookmark = `${assetPathPrefix}/8d53f.svg`;
+const imgIconHouse = `${assetPathPrefix}/5bbbc.svg`;
+const imgIconCalendarDays = `${assetPathPrefix}/b80d2.svg`;
+const imgIconShoppingBasket = `${assetPathPrefix}/5b601.svg`;
+const imgIconRefrigerator = `${assetPathPrefix}/d6417.svg`;
+
+function AndroidGestureArea({ className }: { className?: string }) {
+  return (
+    <div className={className || "bg-[var(--sytno-surface,white)] content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] h-[24px] items-center justify-center p-[var(--sytno-space-0,0px)] relative w-[412px]"} data-node-id="5:735" data-name="Android gesture area">
+      <div className="bg-[var(--sytno-text,#202c25)] h-[4px] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[108px]" data-node-id="5:736" data-name="Rectangle" />
+    </div>
+  );
+}
+
+type NoticeProps = {
+  className?: string;
+  body?: string;
+  title?: string;
+  type?: "Info";
+};
+
+function Notice({ className, body = "Учтём их при составлении покупок.", title = "Продукты уже дома", type = "Info" }: NoticeProps) {
+  return (
+    <div className={className || "bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] w-[364px]"} data-node-id="5:211">
+      <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[24px]" data-node-id="5:212" data-name="Icon/circle-check">
+        <div className="relative shrink-0 size-[24px]" data-node-id="I5:212;5:126" data-name="Icon / circle-check">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCircleCheck} />
+        </div>
+      </div>
+      <div className="[word-break:break-word] content-stretch flex flex-col font-['Manrope:Medium'] font-medium gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-[color:var(--sytno-brand,#245d42)] w-[288px]" data-node-id="5:216" data-name="Copy">
+        <p className="leading-[20px] relative shrink-0 text-[14px] w-[288px]" data-node-id="5:217">
+          {title}
+        </p>
+        <p className="leading-[18px] relative shrink-0 text-[12px] w-[288px]" data-node-id="5:218">
+          {body}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+type ButtonProps = {
+  className?: string;
+  kind?: "Secondary" | "Ghost";
+  label?: string;
+  state?: "Default";
+};
+
+function Button({ className, kind = "Secondary", label = "Продолжить", state = "Default" }: ButtonProps) {
+  const isGhostAndDefault = kind === "Ghost" && state === "Default";
+  return (
+    <div className={className || `content-stretch flex gap-[var(--sytno-space-8,8px)] h-[56px] items-center justify-center p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] w-[364px] ${isGhostAndDefault ? "" : "bg-[var(--sytno-brandSoft,#e9f1e6)]"}`} id={isGhostAndDefault ? "node-5_178" : "node-5_172"}>
+      <p className="[word-break:break-word] font-['Manrope:Bold'] font-bold leading-[22px] relative shrink-0 text-[15px] text-[color:var(--sytno-brand,#245d42)] whitespace-nowrap" data-node-id="5:173">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+type MealRowProps = {
+  className?: string;
+  detail?: string;
+  meta?: string;
+  state?: "Default";
+  title?: string;
+};
+
+function MealRow({ className, detail = "420 ккал · 18 г белка", meta = "Завтрак · 10 мин", state = "Default", title = "Овсянка с бананом" }: MealRowProps) {
+  return (
+    <div className={className || "bg-[var(--sytno-surface,white)] content-stretch flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-20,20px)] w-[364px]"} data-node-id="5:293">
+      <div className="relative rounded-[var(--sytno-radius-20,20px)] shrink-0 size-[76px]" data-node-id="5:294" data-name="Food photo / 0">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[var(--sytno-radius-20,20px)]">
+          <img alt="" className="absolute h-[200%] left-0 max-w-none top-0 w-[300%]" src={imgFoodPhoto0} />
+        </div>
+      </div>
+      <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 w-[224px]" data-node-id="5:295" data-name="Copy">
+        <p className="font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] w-[224px]" data-node-id="5:296">
+          {title}
+        </p>
+        <p className="font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] text-[color:var(--sytno-secondary,#627066)] w-[224px]" data-node-id="5:297">
+          {meta}
+        </p>
+        <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-brand,#245d42)] w-[224px]" data-node-id="5:298">
+          {detail}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+type MetricProps = {
+  className?: string;
+  label?: string;
+  value?: string;
+};
+
+function Metric({ className, label = "ккал в день", value = "2 100" }: MetricProps) {
+  return (
+    <div className={className || "[word-break:break-word] bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex flex-col gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-16,16px)] text-[color:var(--sytno-brand,#245d42)] w-[108px]"} data-node-id="5:737" data-name="Metric">
+      <p className="font-['Manrope:Bold'] font-bold leading-[28px] relative shrink-0 text-[20px] w-[84px]" data-node-id="5:738">
+        {value}
+      </p>
+      <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] w-[84px]" data-node-id="5:739">
+        {label}
+      </p>
+    </div>
+  );
+}
+
+function IconSettings2({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:9" data-name="Icon/settings-2">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:10" data-name="Icon / settings-2">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconSettings2} />
+      </div>
+    </div>
+  );
+}
+
+function IconBatteryFull({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:69" data-name="Icon/battery-full">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:70" data-name="Icon / battery-full">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconBatteryFull} />
+      </div>
+    </div>
+  );
+}
+
+function IconWifi({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:160" data-name="Icon/wifi">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:161" data-name="Icon / wifi">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconWifi} />
+      </div>
+    </div>
+  );
+}
+
+function IconSignal({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative size-[24px]"} data-node-id="5:2" data-name="Icon/signal">
+      <div className="relative shrink-0 size-[24px]" data-node-id="5:3" data-name="Icon / signal">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconSignal} />
+      </div>
+    </div>
+  );
+}
+
+function AndroidStatusBar({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex gap-[var(--sytno-space-0,0px)] h-[48px] items-center justify-between p-[var(--sytno-space-24,24px)] relative w-[412px]"} data-node-id="5:712" data-name="Android status bar">
+      <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-text,#202c25)] whitespace-nowrap" data-node-id="5:713">
+        9:41
+      </p>
+      <div className="content-stretch flex gap-[var(--sytno-space-6,6px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[64px]" data-node-id="5:714" data-name="System icons">
+        <IconSignal className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[16px]" />
+        <IconWifi className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[16px]" />
+        <IconBatteryFull className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[20px]" />
+      </div>
+    </div>
+  );
+}
+
+export default function ScreenToday() {
+  return (
+    <div className="bg-[var(--sytno-bg,#f7f7f0)] content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start overflow-clip p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-28,28px)] size-full" data-node-id="7:10" data-name="Screen / today">
+      <AndroidStatusBar className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[48px] items-center justify-between p-[var(--sytno-space-24,24px)] relative shrink-0 w-[412px]" />
+      <div className="content-stretch flex flex-col gap-[var(--sytno-space-8,8px)] items-start pb-[var(--sytno-space-16,16px)] pt-[var(--sytno-space-12,12px)] px-[var(--sytno-space-24,24px)] relative shrink-0 w-[412px]" data-node-id="9:313" data-name="Header">
+        <div className="content-stretch flex gap-[var(--sytno-space-8,8px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[364px]" data-node-id="9:314" data-name="Heading">
+          <p className="[word-break:break-word] font-['Manrope:Bold'] font-bold leading-[38px] relative shrink-0 text-[30px] text-[color:var(--sytno-text,#202c25)] w-[308px]" data-node-id="9:315">
+            Хорошего дня
+          </p>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-0,0px)] items-center justify-center p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 size-[48px]" data-node-id="9:316" data-name="Action / settings / Icon button">
+            <IconSettings2 className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[24px]" />
+          </a>
+        </div>
+        <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] text-[color:var(--sytno-secondary,#627066)] w-[364px]" data-node-id="9:329">
+          Понедельник, 26 октября
+        </p>
+      </div>
+      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[var(--sytno-space-0,0px)] items-start min-h-px overflow-x-clip overflow-y-auto p-[var(--sytno-space-0,0px)] relative w-[412px]" data-node-id="9:330" data-name="Scrollable content">
+        <div className="content-stretch flex flex-col gap-[var(--sytno-space-16,16px)] items-start pb-[var(--sytno-space-24,24px)] pt-[var(--sytno-space-0,0px)] px-[var(--sytno-space-24,24px)] relative shrink-0 w-[412px]" data-node-id="9:331" data-name="Content">
+          <div className="bg-[var(--sytno-brandDeep,#183e2d)] content-stretch flex gap-[var(--sytno-space-12,12px)] items-center p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-20,20px)] shrink-0 w-[364px]" data-node-id="9:332" data-name="Week budget">
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-[color:var(--sytno-onBrand,white)] w-[244px]" data-node-id="9:333" data-name="Budget">
+              <p className="font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] w-[244px]" data-node-id="9:334">
+                Неделя в бюджете
+              </p>
+              <p className="font-['Manrope:Bold'] font-bold leading-[28px] relative shrink-0 text-[20px] w-[244px]" data-node-id="9:335">
+                3 420 ₽ из 4 000 ₽
+              </p>
+            </div>
+            <a className="content-stretch cursor-pointer flex gap-[var(--sytno-space-0,0px)] items-center justify-center p-[var(--sytno-space-0,0px)] relative shrink-0 size-[48px]" data-node-id="23:3789" data-name="Action / shopping / Icon / arrow-right">
+              <div className="relative shrink-0 size-[24px]" data-node-id="9:336" data-name="Visual / Action / shopping / Icon / arrow-right">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVisualActionShoppingIconArrowRight} />
+              </div>
+            </a>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex gap-[var(--sytno-space-20,20px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 text-[color:var(--sytno-brand,#245d42)] w-[364px]" data-node-id="9:339" data-name="Daily nutrition">
+            <Metric className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex flex-col gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[108px]" label="ккал по плану" />
+            <Metric className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex flex-col gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[108px]" label="белок" value="121 г" />
+            <Metric className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex flex-col gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[108px]" label="готовки за день" value="35 мин" />
+          </div>
+          <div className="content-stretch flex gap-[var(--sytno-space-8,8px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[364px]" data-node-id="9:349" data-name="Section heading">
+            <p className="[word-break:break-word] font-['Manrope:Bold'] font-bold leading-[28px] relative shrink-0 text-[20px] text-[color:var(--sytno-text,#202c25)] w-[260px]" data-node-id="9:350">
+              Сегодня в меню
+            </p>
+            <a className="content-stretch cursor-pointer flex gap-[var(--sytno-space-0,0px)] h-[48px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[96px]" data-node-id="23:3791" data-name="Action / week / Вся неделя">
+              <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] text-[color:var(--sytno-brand,#245d42)] text-right w-[96px]" data-node-id="9:351">
+                Вся неделя
+              </p>
+            </a>
+          </div>
+          <MealRow className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-20,20px)] shrink-0 w-[364px]" />
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex flex-col gap-[var(--sytno-space-10,10px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-24,24px)] shrink-0 w-[364px]" data-node-id="9:358" data-name="Action / recipe / Meal card / State=Pinned">
+            <div className="h-[156px] relative rounded-[var(--sytno-radius-20,20px)] shrink-0 w-[340px]" data-node-id="I9:358;5:270" data-name="Food photo / 1">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[var(--sytno-radius-20,20px)]">
+                <img alt="" className="absolute h-[438.66%] left-[-100%] max-w-none top-[-59.66%] w-[300%]" src={imgFoodPhoto0} />
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[var(--sytno-space-8,8px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[340px]" data-node-id="I9:358;5:271" data-name="Meal heading">
+              <p className="[word-break:break-word] font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] text-left w-[292px]" data-node-id="I9:358;5:272">
+                Курица с гречкой
+              </p>
+              <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[24px]" data-node-id="I9:358;5:273" data-name="Icon/bookmark">
+                <div className="relative shrink-0 size-[24px]" data-node-id="I9:358;5:273;5:67" data-name="Icon / bookmark">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconBookmark} />
+                </div>
+              </div>
+            </div>
+            <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] text-[color:var(--sytno-secondary,#627066)] text-left w-[340px]" data-node-id="I9:358;5:276">
+              Обед · 25 мин · 42 г белка
+            </p>
+            <div className="[word-break:break-word] content-stretch flex font-['Manrope:Medium'] font-medium gap-[var(--sytno-space-8,8px)] items-center leading-[20px] p-[var(--sytno-space-0,0px)] relative shrink-0 text-[14px] w-[340px]" data-node-id="I9:358;5:277" data-name="Meal footer">
+              <p className="relative shrink-0 text-[color:var(--sytno-text,#202c25)] text-left w-[160px]" data-node-id="I9:358;5:278">
+                580 ккал
+              </p>
+              <p className="relative shrink-0 text-[color:var(--sytno-brand,#245d42)] text-right w-[172px]" data-node-id="I9:358;5:279">
+                ≈ 148 ₽ / порция
+              </p>
+            </div>
+          </a>
+          <div className="content-stretch cursor-pointer flex gap-[var(--sytno-space-8,8px)] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[364px]" data-node-id="9:371" data-name="Meal actions">
+            <Button className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex gap-[var(--sytno-space-8,8px)] h-[56px] items-center justify-center p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[178px]" label="Заменить блюдо" />
+            <Button className="content-stretch flex gap-[var(--sytno-space-8,8px)] h-[56px] items-center justify-center p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[178px]" kind="Ghost" label="Добавить своё" />
+          </div>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-20,20px)] shrink-0 w-[364px]" data-node-id="9:376" data-name="Action / recipe / Meal row / State=Default">
+            <div className="relative rounded-[var(--sytno-radius-20,20px)] shrink-0 size-[76px]" data-node-id="I9:376;5:294" data-name="Food photo / 0">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[var(--sytno-radius-20,20px)]">
+                <img alt="" className="absolute h-[200%] left-0 max-w-none top-[-100%] w-[300%]" src={imgFoodPhoto0} />
+              </div>
+            </div>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-left w-[224px]" data-node-id="I9:376;5:295" data-name="Copy">
+              <p className="font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] w-[224px]" data-node-id="I9:376;5:296">
+                Омлет с овощами
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] text-[color:var(--sytno-secondary,#627066)] w-[224px]" data-node-id="I9:376;5:297">
+                Ужин · 15 мин
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-brand,#245d42)] w-[224px]" data-node-id="I9:376;5:298">
+                510 ккал · 31 г белка
+              </p>
+            </div>
+          </a>
+          <a className="bg-[var(--sytno-surface,white)] content-stretch cursor-pointer flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-12,12px)] relative rounded-[var(--sytno-radius-20,20px)] shrink-0 w-[364px]" data-node-id="9:382" data-name="Action / recipe / Meal row / State=Default">
+            <div className="relative rounded-[var(--sytno-radius-20,20px)] shrink-0 size-[76px]" data-node-id="I9:382;5:294" data-name="Food photo / 0">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-[var(--sytno-radius-20,20px)]">
+                <img alt="" className="absolute h-[200%] left-[-100%] max-w-none top-[-100%] w-[300%]" src={imgFoodPhoto0} />
+              </div>
+            </div>
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[var(--sytno-space-4,4px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 text-left w-[224px]" data-node-id="I9:382;5:295" data-name="Copy">
+              <p className="font-['Manrope:SemiBold'] font-semibold leading-[24px] relative shrink-0 text-[16px] text-[color:var(--sytno-text,#202c25)] w-[224px]" data-node-id="I9:382;5:296">
+                Творог и ягоды
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[20px] relative shrink-0 text-[14px] text-[color:var(--sytno-secondary,#627066)] w-[224px]" data-node-id="I9:382;5:297">
+                Перекус · 2 мин
+              </p>
+              <p className="font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-brand,#245d42)] w-[224px]" data-node-id="I9:382;5:298">
+                590 ккал · 30 г белка
+              </p>
+            </div>
+          </a>
+          <Notice body="Для завтрака уже есть овсянка. Яйца пригодятся к ужину." className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex gap-[var(--sytno-space-12,12px)] items-start p-[var(--sytno-space-16,16px)] relative rounded-[var(--sytno-radius-16,16px)] shrink-0 w-[364px]" title="Сначала используем дома" />
+        </div>
+      </div>
+      <div className="bg-[var(--sytno-surface,white)] content-stretch flex gap-[var(--sytno-space-0,0px)] h-[80px] items-center p-[var(--sytno-space-12,12px)] relative shrink-0 w-[412px]" data-node-id="9:396" data-name="Bottom navigation / Active=Today">
+        <div className="content-stretch flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I9:396;5:540" data-name="Action / today / Tab / Today">
+          <div className="bg-[var(--sytno-brandSoft,#e9f1e6)] content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I9:396;5:541" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I9:396;5:542" data-name="Icon/house">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I9:396;5:542;5:119" data-name="Icon / house">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconHouse} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-brand,#245d42)] whitespace-nowrap" data-node-id="I9:396;5:546">
+            Сегодня
+          </p>
+        </div>
+        <a className="content-stretch cursor-pointer flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I9:396;5:547" data-name="Action / week / Tab / Week">
+          <div className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I9:396;5:548" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I9:396;5:549" data-name="Icon/calendar-days">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I9:396;5:549;5:47" data-name="Icon / calendar-days">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconCalendarDays} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] text-left whitespace-nowrap" data-node-id="I9:396;5:561">
+            Неделя
+          </p>
+        </a>
+        <a className="content-stretch cursor-pointer flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I9:396;5:562" data-name="Action / shopping / Tab / Shopping">
+          <div className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I9:396;5:563" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I9:396;5:564" data-name="Icon/shopping-basket">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I9:396;5:564;5:22" data-name="Icon / shopping-basket">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconShoppingBasket} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] text-left whitespace-nowrap" data-node-id="I9:396;5:573">
+            Покупки
+          </p>
+        </a>
+        <a className="content-stretch cursor-pointer flex flex-col gap-[var(--sytno-space-2,2px)] h-[56px] items-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[97px]" data-node-id="I9:396;5:574" data-name="Action / pantry / Tab / Pantry">
+          <div className="content-stretch flex gap-[var(--sytno-space-0,0px)] h-[30px] items-center justify-center p-[var(--sytno-space-0,0px)] relative rounded-[var(--sytno-radius-999,999px)] shrink-0 w-[56px]" data-node-id="I9:396;5:575" data-name="Indicator">
+            <div className="content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] items-start p-[var(--sytno-space-0,0px)] relative shrink-0 size-[22px]" data-node-id="I9:396;5:576" data-name="Icon/refrigerator">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I9:396;5:576;5:114" data-name="Icon / refrigerator">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIconRefrigerator} />
+              </div>
+            </div>
+          </div>
+          <p className="[word-break:break-word] font-['Manrope:Medium'] font-medium leading-[18px] relative shrink-0 text-[12px] text-[color:var(--sytno-secondary,#627066)] text-left whitespace-nowrap" data-node-id="I9:396;5:581">
+            Запасы
+          </p>
+        </a>
+      </div>
+      <AndroidGestureArea className="bg-[var(--sytno-surface,white)] content-stretch flex flex-col gap-[var(--sytno-space-0,0px)] h-[24px] items-center justify-center p-[var(--sytno-space-0,0px)] relative shrink-0 w-[412px]" />
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: Сытно/Caption: Font(family: "Manrope", style: Medium, size: 12, weight: 500, lineHeight: 18, letterSpacing: 0), Сытно/Title: Font(family: "Manrope", style: Bold, size: 30, weight: 700, lineHeight: 38, letterSpacing: 0), Сытно/Small: Font(family: "Manrope", style: Medium, size: 14, weight: 500, lineHeight: 20, letterSpacing: 0), Сытно/Subheading: Font(family: "Manrope", style: Bold, size: 20, weight: 700, lineHeight: 28, letterSpacing: 0), Сытно/BodyStrong: Font(family: "Manrope", style: SemiBold, size: 16, weight: 600, lineHeight: 24, letterSpacing: 0), Сытно/Label: Font(family: "Manrope", style: Bold, size: 15, weight: 700, lineHeight: 22, letterSpacing: 0).
+
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## Meal row
+**Node ID:** 5:305
+
+Сытно · Meal row. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+## Meal card
+**Node ID:** 5:292
+
+Сытно · Meal card. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+## Button
+**Node ID:** 5:190
+
+Сытно · Button. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+## Notice
+**Node ID:** 5:245
+
+Сытно · Notice. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+## Bottom navigation
+**Node ID:** 5:711
+
+Сытно · Bottom navigation. Use instances; editable text properties. Android touch areas at least 48 dp.
+
+The generated code contains image and SVG URL constants, e.g. const image = `${assetPathPrefix}/<asset file name>`, where assetPathPrefix is declared once at the top of the code and every asset URL interpolates it. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.
